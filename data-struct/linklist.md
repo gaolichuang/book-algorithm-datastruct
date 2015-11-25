@@ -21,3 +21,34 @@ Return a deep copy of the list.
 问题分析
   - 随机指针， 需要找方式来实现copy后的链表对应关系
 
+
+
+##### 3.[LeetCode][easy] Remove Linked List Elements
+Remove all elements from a linked list of integers that have value val.  
+Example  
+Given: 1 –> 2 –> 6 –> 3 –> 4 –> 5 –> 6, val = 6  
+Return: 1 –> 2 –> 3 –> 4 –> 5  
+```
+/**
+ * 递归实现
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode removeElements(ListNode head, int val) {
+	if (head == null) {
+		return null;
+	}
+	if (head.val == val){
+		head = removeElements(head.next, val);
+	} else {
+		head.next = removeElements(head.next, val);
+	}
+	return head;
+    }
+}
+```

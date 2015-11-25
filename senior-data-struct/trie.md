@@ -19,7 +19,7 @@ o  y      w
 > 词频统计
 > 前缀匹配
 
-```
+```python
 class TrieNode:
   # Initialize your data structure here.
   def __init__(self):

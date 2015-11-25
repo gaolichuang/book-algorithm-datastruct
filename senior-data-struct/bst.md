@@ -29,7 +29,7 @@ class TreeNode(object):
 
 ## Question
 ##### 1. 二叉树前序，中序，后序遍历，递归方式
-```
+```python
 def nlr(root):
   if root:
     print root.val,
@@ -49,7 +49,7 @@ def lrn(root):
 
 
 ##### 2. 前序中序遍历非递归
-```
+```python
 # base one stack to travel
 def visitlnr(root):
   s = []
@@ -79,7 +79,7 @@ reference： [bst travel]
 
 
 ##### 3. 后序遍历非递归
-```
+```python
 #后序不同于前序和中序的原因是root不能出栈，知道右子树也访问完毕，  使用pre来标记  
 #当pre是右子树的情况说明右页访问完， 可以出栈
 def visitlrn(root):
@@ -99,7 +99,7 @@ def visitlrn(root):
 ```
 
 #### 4. 层次遍历
-```
+```python
 from collections import deque
 
 def VisitTree_LevelOrder(root):
@@ -112,7 +112,7 @@ def VisitTree_LevelOrder(root):
     if root.right: q.append(root.right)
 ```
 #### 5. 二叉树路径
-```
+```python
 def path(root):
     rets = []
     pathdfs(root,[],rets)
@@ -134,7 +134,7 @@ def pathdfs(root, ret, rets):
     ret.pop()
 ```
 #### 5. 二叉树高度， 经典递归
-```
+```python
 def treeHeight(root):
   if root == None:
     return 0

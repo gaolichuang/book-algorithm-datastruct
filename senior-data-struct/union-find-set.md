@@ -30,7 +30,7 @@
 2、Union(x,y)时 按秩合并
 即合并的时候将元素少的集合合并到元素多的集合中，这样合并之后树的高度会相对较小。
 
-```
+```C
 int father[MAX];   /* father[x]表示x的父节点*/
 int rank[MAX];     /* rank[x]表示x的秩*/
 

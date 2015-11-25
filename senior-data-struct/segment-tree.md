@@ -22,7 +22,7 @@
 > 如果L > 1 : 则[a, (a+b)/2]为T的左孩子 [(a+b)/2, b]为T的右孩子
 > 如果L == 1: T为叶子节点
 
-```
+```python
 结构定义， build， insert， delete 方法如下
 class SegNode(object):
   def __init__(self, l, r):

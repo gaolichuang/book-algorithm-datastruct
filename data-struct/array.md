@@ -39,6 +39,40 @@ Given an array S of n integers, are there elements a, b, c in S such that a + b 
 
    [k sum solution]: <http://tech-wonderland.net/blog/summary-of-ksum-problems.html>
 
+#### 2. [leetcode][Hard]Minimum Window Substring
+Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).  
+
+>For example,  
+>S = "ADOBECODEBANC"  
+>T = "ABC"  
+>Minimum window is "BANC".  
+
+Note:  
+If there is no such window in S that covers all characters in T, return the empty string "".  
+If there are multiple such windows, you are guaranteed that there will always be only one unique minimum window in S.  
+
+问题分析
+  -  hash table
+  -  two pointer
+
+#### 3. [leetcode][hard]Find the Duplicate Number
+Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.  
+
+Note:
+> You must not modify the array (assume the array is read only).  
+> You must use only constant, O(1) extra space.  
+> Your runtime complexity should be less than O(n2).  
+> There is only one duplicate number in the array, but it could be repeated more than once.
+
+问题分析
+  -  跟链表是否有环问题类似
+  - http://segmentfault.com/a/1190000003817671
+  - 假设数组中没有重复，那我们可以做到这么一点，就是将数组的下标和1到n每一个数一对一的映射起来。比如数组是213,则映射关系为0->2, 1->1, 2->3。
+  - 假设这个一对一映射关系是一个函数f(n)，其中n是下标，f(n)是映射到的数。如果我们从下标为0出发，根据这个函数计算出一个值，以这个值为新的下标，再用这个函数计算，以此类推，直到下标超界。
+  - 实际上可以产生一个类似链表一样的序列。比如在这个例子中有两个下标的序列，0->2->3。
+  - 但如果有重复的话，这中间就会产生多对一的映射，比如数组2131,则映射关系为0->2, {1，3}->1, 2->3。这样，我们推演的序列就一定会有环路了，这里下标的序列是0->2->3->1->1->1->1->...，而环的起点就是重复的数。
+
+
 ## TODO
 1. AC code 3sum
 2. Other Questions

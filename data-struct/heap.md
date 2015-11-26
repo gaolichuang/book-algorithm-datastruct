@@ -15,6 +15,10 @@
   - 最大堆和最小堆： 前半部分最小堆， 后半部分最大堆， 堆顶就是中间的两个元素
 
 
+##### 2.[leetcode][hard]The Skyline Problem
+
+排序+堆， 进入和离开， 进入计算最大值， 离开删掉最大值，调整堆
+http://segmentfault.com/a/1190000003786782
 
 
 ## TODO

@@ -83,8 +83,8 @@ class HeapMin(object):
     p = m
     j = 2*m + 1
     while j < lens:
-      if self.judge(s[j], s[j+1]): j+=1
-      if self.judge(s[j], s[p]): break
+      if self.judge(s[j], s[j+1]): j+=1  # 左右孩子中得到较大的，第一次比较
+      if self.judge(s[j], s[p]): break   # 较大者跟父亲比较， 第二次比较
       s[j],s[p] = s[p],s[j]
       p = j
       j = 2*p + 1

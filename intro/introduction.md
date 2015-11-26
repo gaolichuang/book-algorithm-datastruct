@@ -4,3 +4,7 @@
   - 题目按照不同的维度可能会重复
   - 部分题目解法来源于网络
   - solution部分会有AC的code， python为主
+
+https://www.hackerrank.com/domains
+http://blog.csdn.net/hnuzengchao/article/details/40261229
+https://leetcode.com/problemset/algorithms/

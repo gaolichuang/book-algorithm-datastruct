@@ -16,3 +16,6 @@ http://blog.csdn.net/fox64194167/article/details/19965069
      - 如何告知client发送request减缓？
      - 多个client该服务哪个？
   -  server的服务能力没到阈值，或者说client的request过慢，该怎么办？
+
+##### 4.设计一个Reactor系统。 
+ > 需求： 如果制定的监控数据发生变动， 自动触发Reactor系统重新计算，主要用于Precomputing

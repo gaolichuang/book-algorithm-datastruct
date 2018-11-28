@@ -37,11 +37,15 @@ class Solution(object):
             return 0
         if len(root.children)==0:
             return 1
+        # max方法和 list travel方式
+        return max(self.maxDepth(node) for node in root.children) + 1
+        '''
         ans = 0
         # travel list
         for c in root.children:
             ans = max(ans,self.maxDepth(c))
         return ans+1
+        '''
 if __name__ == '__main__':
     solution = Solution()
     print solution.maxDepth(None)

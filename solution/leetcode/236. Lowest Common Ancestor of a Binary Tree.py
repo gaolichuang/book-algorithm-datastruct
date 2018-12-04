@@ -84,6 +84,7 @@ print s,s
 
 def modifyseq(seq,seq2):
     seq2 = copy.copy(seq)
+    #函数内对形参做修改是没有用的，ide提示了，说是local variable
 
 x = []
 modifyseq(s,x)
